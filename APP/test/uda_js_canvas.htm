@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+    <title>Test 2</title>
+	<script src="/Math/jquery/jquery-1.12.4/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<canvas id="c" width="500" height="500"></canvas>
+<script type="text/javascript">
+	var c = document.querySelector("#c");
+	var ctx = c.getContext("2d");
+
+//	var image = new Image();
+//	image.onload = function () {
+//		console.log("Loaded image");
+//		ctx.drawImage(image, 0, 0, c.width, c.height);
+//	}
+//	image.src = "bellamath.gif";
+
+//	ctx.strokeStyle = "#33cc33";
+//	ctx.strokeRect(50, 50, 100, 100);
+//	ctx.beginPath();
+//	ctx.moveTo(75, 75);
+//	ctx.lineTo(125, 125);
+//	ctx.lineTo(125, 75);
+//	ctx.fillStyle = "blue";
+//	ctx.fill();
+//	ctx.strokeText("HELLO UDACITY!", 50, 10);
+
+
+	ctx.font = "36pt Impact";
+	ctx.textAlign = "center";
+	
+	ctx.fillStyle = "white";
+	ctx.fillText("CANVAS MEMES!", c.width / 2, 40);
+
+	ctx.strokeStyle = "black";
+	ctx.lineWidth = 3;
+	ctx.strokeText("CANVAS MEMES!", c.width / 2, 40);
+
+</script>
+</body>
+</html>

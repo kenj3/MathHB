@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>口袋数学 - 幼儿园数学练习 - 除法初级</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/game.math.css" rel="stylesheet" type="text/css" />
+		
+		<script src="../jquery/jquery-1.12.4/jquery-1.12.4.min.js"></script>
+		<script src="../jquery/mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="../libs/google.fastbutton.js"></script>
+		<script src="../libs/jquery.google.fastbutton.js"></script>
+		<script src="../js/game.config.js"></script>
+		<script src="../js/game.mathsimple.js"></script>
+		<script>
+			var GAMEID = 7;	
+		</script>
+	</head>
+	<body>
+		<!-- 开始页面 -->
+		<div class="jpanelstart panelstart" style="display:none;">
+			<div class="logotext">口袋数学</div>
+            <div class="title jstitle" style="padding-top:30px;">数学每日练：除法初级</div>
+            <div class="titlesub jlevelname">25以内除法</div>
+            <div class="titledesc">一共10题，根据成绩和时间计算排名。对于5岁-7岁的小朋友来说，快速心算出正确的答案对今后的学习和生活有极大的帮助。</div>
+            <div class="titlebeila jstitlebeila">贝拉正在努力玩数学,你也要加油哦!</div>
+			<div class="" style="text-align:center; padding-top:50px;">
+				<span class="buttonfixed buttonfixedsizebig yellow jstart">开始</span>
+			</div>
+		</div>
+		<!-- 结果页面 -->
+        <div class="jpanelresult" style="display:none;">
+        	<div class="logotext">口袋数学</div>
+            <div class="title jstitle" style="padding-top:50px;">25以内除法</div>
+            <div style="text-align:center; padding-top:20px;">
+                <span class="scoretext">成绩：</span> <span class="scorenumber jscore"></span>
+            </div>
+            <div style="text-align:center; padding-top:10px;">
+                <span class="scoretimetext">用时：</span> <span class="scoretime jscoretime"></span>
+            </div>
+            <div class="" style="text-align:center; padding-top:80px;">
+                <span class="buttonfixed buttonfixedsizebig yellow jredo">再来</span>
+                <span class="buttonfixed buttonfixedsizebig yellow jnextlevel" style="display:none;">下一关</span>
+            </div>
+        </div>
+		<!-- 游戏页面 -->
+		<div class="jpaneltest" style="display:none; padding-top:44px;">
+			<div class="game-bar game-bar-nav">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				口袋数学 (25以内除法)
+			</div>
+			<div class="container-fluid question-container">
+				<div class="questiondesc">第<strong><span class="jindexofquestion">1</span></strong>题</div>
+				<div class="question">
+					<span class="num1 jquestionnumber1">0</span>
+					<span class="symbol jsymbol">+</span>
+					<span class="num2 jquestionnumber2">0</span>
+					<span class="euqal">=</span>
+					<span class="result jquestionresult"></span>
+				</div>
+			</div>
+			<div class="container-fluid game-container" id="ctrlpanel">
+				<div class="page-content-padded jsnumbers">
+					<div class="flex-container">
+						<a id="icon-icon-contact" data-value="7" class="button yellow jnumber"><span>7</span></a>
+						<a id="icon-icon-contact" data-value="8" class="button yellow jnumber"><span>8</span></a>
+						<a id="icon-icon-contact" data-value="9" class="button yellow jnumber"><span>9</span></a>
+					</div>
+					<div class="clearfix"></div>
+					<div class="flex-container">
+						<a id="icon-icon-contact" data-value="4" class="button yellow jnumber"><span>4</span></a>
+						<a id="icon-icon-contact" data-value="5" class="button yellow jnumber"><span>5</span></a>
+						<a id="icon-icon-contact" data-value="6" class="button yellow jnumber"><span>6</span></a>
+					</div>
+					<div class="clearfix"></div>
+					<div class="flex-container">
+						<a id="icon-icon-contact" data-value="1" class="button yellow jnumber"><span>1</span></a>
+						<a id="icon-icon-contact" data-value="2" class="button yellow jnumber"><span>2</span></a>
+						<a id="icon-icon-contact" data-value="3" class="button yellow jnumber"><span>3</span></a>
+						<a id="icon-icon-contact" class="button yellow icon-fat jprevious" style="display:none;"><span>返回</span></a>
+					</div>
+					<div class="clearfix"></div>
+					<div class="flex-container">
+						<a id="icon-icon-contact" data-value="0" class="button yellow icon-fat jnumber"><span>0</span></a>
+						<a id="icon-icon-contact" data-value="." class="button yellow jnumber" style="display:none;"><span>.</span></a>
+						<a id="icon-icon-contact" data-value="c" class="button yellow jclear"><span>C</span></a>
+						<a id="icon-icon-contact" class="button yellow icon-fat jnext"><span>继续</span></a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

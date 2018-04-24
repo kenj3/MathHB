@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+    <title>Test 2</title>
+	<script src="/Math/jquery/jquery-1.12.4/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+Test 2
+<script type="text/javascript">
+	var Car = function (loc) {
+		this.loc = loc;
+	};
+	Car.prototype.move = function () {
+		this.loc++;
+	};
+
+	var Van = function (loc) {
+		Car.call(this, loc);
+	};
+	Van.prototype = Object.create(Car.prototype);
+	Van.prototype.constructor = Van;
+	Var.prototype.grab = function () { };
+
+	var zed = new Car(3);
+	zed.move();
+
+	var amy = new Van(9);
+	console.log(amy.loc);
+	amy.move();
+	amy.grab();
+	console.log(amy.constructor);
+
+</script>
+</body>
+</html>
